@@ -1,4 +1,4 @@
-﻿/*
+﻿
 var zero_cache = 'my-site-cache-v1';
 var urlsToCache = [
   '/hjtest/index.html',
@@ -15,7 +15,7 @@ self.addEventListener('install', function(event) {
       })
   );
 });
-*/
+
     
 self.addEventListener('fetch', function(event) {
   event.respondWith(
