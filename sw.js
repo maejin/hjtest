@@ -24,6 +24,7 @@ self.addEventListener('fetch', function(event) {
         // Cache hit - return response
         if (response) {
           return response;
+console.log( response );
         }
         return fetch(event.request);
       }
