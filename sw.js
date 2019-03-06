@@ -1,8 +1,8 @@
 ﻿
 var zero_cache = 'my-site-cache-v1';
 var urlsToCache = [
-  '/index.html',
-  '/css/main.css'
+  '/hjtest/index.html',
+  '/hjtest/css/main.css'
 ];
 
 self.addEventListener('install', function(event) {
