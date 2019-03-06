@@ -1,7 +1,7 @@
 ﻿
 var zero_cache = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
+  '/index.html',
   '/css/main.css'
 ];
 
