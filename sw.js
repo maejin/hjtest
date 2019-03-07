@@ -1,7 +1,7 @@
 ﻿
 var zero_cache = 'my-site-cache-v1';
 var urlsToCache = [
-  '/hjtest/index.html',
+  '/hjtest/',
   '/hjtest/css/main.css'
 ];
 
