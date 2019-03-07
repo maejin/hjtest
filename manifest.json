@@ -1,7 +1,7 @@
 {
   "name": "My App",
     "short_name": "my-app",
-    "start_url": "/hjtest",
+    "start_url": "/hjtest/",
     "icons": [
     {
       "src": "/hjtest/images/my-push-logo-192x192.png",
