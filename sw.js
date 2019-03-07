@@ -81,3 +81,10 @@ self.addEventListener('push', function(e) {
 	);
 
 });
+
+self.addEventListener('notificationclick', function(event) {
+  //푸시 노티피케이션 에서 클릭 리스너
+	var data = event.notification.data;
+	event.notification.close();
+	event.waitUntil( clients.openWindow( data.url ) );
+});
