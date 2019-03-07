@@ -40,8 +40,8 @@ self.addEventListener('push', function(event) {
 	const title = payload.title;
 	const options = {
 		body: payload.body,
-		icon: 'images/fav.ico',
-		badge: 'images/badge.png',
+		icon: '/hjtest/images/fav.ico',
+		badge: '/hjtest/images/badge.png',
 		vibrate: [200, 100, 200, 100, 200, 100, 400],
 		data : payload.params
 	};
