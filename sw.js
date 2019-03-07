@@ -35,7 +35,7 @@ console.log( response );
 
 self.addEventListener('push', function(event) {
   //푸시 리스너
-  console.log( event );
+  console.log( event.data.json() );
 	var payload = event.data.json();
 	const title = payload.title;
 	const options = {
