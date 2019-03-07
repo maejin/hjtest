@@ -33,6 +33,8 @@ console.log( response );
 });
 
 */
+
+/*
 self.addEventListener('push', function(event) {
   //푸시 리스너
 	var payload = event.data.json();
@@ -52,4 +54,30 @@ self.addEventListener('notificationclick', function(event) {
 	var data = event.notification.data;
 	event.notification.close();
 	event.waitUntil( clients.openWindow( data.url ) );
+});
+
+*/
+
+
+
+self.addEventListener('push', function(e) {
+	var options = {
+		body: 'This notification was generated from a push!',
+		icon: '/hjtest/images/badge.png',
+		vibrate: [100, 50, 100],
+		data: {
+			dateOfArrival: Date.now(),
+			primaryKey: '2'
+		},
+		actions: [
+			{ action: 'explore', title: 'Explore this new world',
+			icon: 'images/badge.png'},
+			{ action: 'close', title: 'Close',
+			icon: 'images/badge.png'}
+		]
+	};
+	e.waitUntil(
+		self.registration.showNotification('Hello!', options)	
+	);
+
 });
