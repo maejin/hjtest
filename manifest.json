@@ -4,7 +4,7 @@
     "start_url": "/hjtest/",
     "icons": [
     {
-      "src": "/hjtest/images/my-push-logo-192x192.png",
+      "src": "/hjtest/images/my-push-logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }
