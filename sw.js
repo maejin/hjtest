@@ -58,6 +58,20 @@ self.addEventListener('notificationclick', function(event) {
 
 */
 
+function showNotification() {
+  Notification.requestPermission(function(result) {
+    if (result === 'granted') {
+      navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification('Vibration Sample', {
+          body: 'Buzz! Buzz!',
+          icon: '/hjtest/images/badge.png',
+          vibrate: [200, 100, 200, 100, 200, 100, 200],
+          tag: 'vibration-sample'
+        });
+      });
+    }
+  });
+}
 
 
 self.addEventListener('push', function(e) {
@@ -71,9 +85,9 @@ self.addEventListener('push', function(e) {
 		},
 		actions: [
 			{ action: 'explore', title: 'Explore this new world',
-			icon: 'images/badge.png'},
+			icon: '/hjtest/images/badge.png'},
 			{ action: 'close', title: 'Close',
-			icon: 'images/badge.png'}
+			icon: '/hjtest/images/badge.png'}
 		]
 	};
 	e.waitUntil(
