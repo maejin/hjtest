@@ -91,7 +91,7 @@ self.addEventListener('push', function(e) {
 		]
 	};
 	e.waitUntil(
-		self.registration.showNotification('Hello!', options)	
+		self.registration.showNotification('푸시 테스트!', options)	
 	);
 
 });
