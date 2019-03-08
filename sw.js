@@ -63,7 +63,7 @@ function showNotification() {
     if (result === 'granted') {
       navigator.serviceWorker.ready.then(function(registration) {
         registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
+          body: 'test! test!',
           icon: '/hjtest/images/badge.png',
           vibrate: [200, 100, 200, 100, 200, 100, 200],
           tag: 'vibration-sample'
