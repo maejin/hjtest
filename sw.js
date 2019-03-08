@@ -91,12 +91,14 @@ function _getRegistration() {
 
 
 function testPush(message) {
-	this._getRegistration().then(function(registration) {
+	//this._getRegistration().then(function(registration) {
+	navigator.serviceWorker.ready.then(function(registration) {
 	  registration.active.postMessage({
 		type: 'test-push',
 		message: message
 	  });
 	});
+	//});
 }
 
 
