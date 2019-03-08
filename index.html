@@ -27,11 +27,12 @@ Notification.requestPermission(function(result) {
   }
 });
 
-
-$('.go_push').on('click',function() {
-	alert('asdf');
-	testPush('테스트');
-})
+$(document).ready(function() {
+	$('.go_push').on('click',function() {
+		alert('asdf');
+		testPush('테스트');
+	})
+});
 
 </script>
 
