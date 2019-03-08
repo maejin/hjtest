@@ -74,6 +74,31 @@ function showNotification() {
 }
 
 
+function _getRegistration() {
+	return navigator.serviceWorker.getRegistration(SCOPE).then(function(registration) {
+		// If we have a service worker whose scope is a superset of the push
+		// scope then getRegistration will return that if our own worker is
+		// not registered. Check that the registration we have is really ours
+		if (registration && registration.scope === SCOPE) {
+			return registration;
+		}
+		return;
+	});
+}
+
+
+
+function testPush(message) {
+	this._getRegistration().then(function(registration) {
+	  registration.active.postMessage({
+		type: 'test-push',
+		message: message
+	  });
+	});
+}
+
+
+
 self.addEventListener('push', function(e) {
 	var options = {
 		body: '푸시 테스트 입니당!',
