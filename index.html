@@ -1,5 +1,5 @@
 ﻿<!--<link rel="manifest" href="/hjtest/manifest.json" />-->
-
+<script src='/hjtest/sw.js'></script>
 <script language='javascript'>
 /*
 if ('serviceWorker' in navigator) {
@@ -20,7 +20,7 @@ navigator.serviceWorker.register('/hjtest/sw.js');
 Notification.requestPermission(function(result) {
   if (result === 'granted') {
     navigator.serviceWorker.ready.then(function(registration) {
-		//testPush('테스트!');
+		testPush('테스트!');
       //registration.showNotification('Notification with ServiceWorker');
     });
   }
