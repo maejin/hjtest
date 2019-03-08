@@ -22,7 +22,7 @@ Notification.requestPermission(function(result) {
   if (result === 'granted') {
     navigator.serviceWorker.ready.then(function(registration) {
 		testPush('테스트!');
-      //registration.showNotification('Notification with ServiceWorker');
+		registration.showNotification('Notification with ServiceWorker');
     });
   }
 });
