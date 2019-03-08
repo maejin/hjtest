@@ -21,7 +21,7 @@ navigator.serviceWorker.register('/hjtest/sw.js');
 Notification.requestPermission(function(result) {
   if (result === 'granted') {
     navigator.serviceWorker.ready.then(function(registration) {
-		//testPush('테스트!');
+		testPush('테스트!');
       //registration.showNotification('Notification with ServiceWorker');
     });
   }
@@ -29,7 +29,7 @@ Notification.requestPermission(function(result) {
 
 $(document).ready(function() {
 	$('.go_push').on('click',function() {
-		testPush('테스트');
+		//testPush('테스트');
 	})
 });
 
