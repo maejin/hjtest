@@ -76,7 +76,7 @@ function showNotification() {
 
 self.addEventListener('push', function(e) {
 	var options = {
-		body: 'This notification was generated from a push!',
+		body: '푸시 테스트 입니당!',
 		icon: '/hjtest/images/badge.png',
 		vibrate: [100, 50, 100],
 		data: {
