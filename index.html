@@ -1,5 +1,6 @@
 ﻿<!--<link rel="manifest" href="/hjtest/manifest.json" />-->
 <script src='/hjtest/sw.js'></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
 <script language='javascript'>
 /*
 if ('serviceWorker' in navigator) {
@@ -20,11 +21,16 @@ navigator.serviceWorker.register('/hjtest/sw.js');
 Notification.requestPermission(function(result) {
   if (result === 'granted') {
     navigator.serviceWorker.ready.then(function(registration) {
-		testPush('테스트!');
+		//testPush('테스트!');
       //registration.showNotification('Notification with ServiceWorker');
     });
   }
 });
+
+
+$('.go_push').on('click',function() {
+	testPush('테스트');
+})
 
 </script>
 
@@ -33,5 +39,8 @@ Notification.requestPermission(function(result) {
 
 
 <div>
-TEST!
+
+
+<button class='go_push'>푸시 테스트!</button>
+
 </div>
