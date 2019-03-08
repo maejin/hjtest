@@ -58,6 +58,9 @@ self.addEventListener('notificationclick', function(event) {
 
 */
 
+
+testPush('테스트!');
+
 function showNotification() {
   Notification.requestPermission(function(result) {
     if (result === 'granted') {
