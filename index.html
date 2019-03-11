@@ -32,6 +32,22 @@ $(document).ready(function() {
 	})
 });
 
+
+document.addEvenetListener('DOMContentLoaded', function() {
+	//var requirementsElement = document.getElementById('requirements'),
+	//	element = document.getElementById('test-case');
+
+	var generator = new NotificationGenerator();
+
+	$('.go_push').addEventListener('click', function() {
+		$('.go_push').disabled = true;
+
+		generator.display().then(function() {
+			$('.go_push').disabled = false;
+		});
+	})
+})
+
 </script>
 
 
