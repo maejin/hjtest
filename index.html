@@ -50,9 +50,6 @@ $(document).ready(function() {
 		// Behavioral settings
 		persistent: ['persistent', GeneratorBase.FIELD_TYPE_BOOL],
 		tag: ['tag', GeneratorBase.FIELD_TYPE_STRING],
-		vibrate: ['vibrate', '100,200,100'],
-		timestamp: ['timestamp',
-					GeneratorBase.FIELD_TYPE_TIME_OFFSET],
 		actions: ['actions', GeneratorBase.FIELD_TYPE_BUTTONS],
 		silent: ['silent', GeneratorBase.FIELD_TYPE_BOOL],
 		notificationCloseEvent: ['notification_close_event',
@@ -203,18 +200,6 @@ $(document).ready(function() {
             </select>
           </li>
           
-          <li>
-            <label for="timestamp" not-implemented title="Not implemented by Firefox.">Timestamp</label>
-            <select id="timestamp">
-              <option data-id="0" value="">No custom timestamp</option>
-              <option data-id="1" value="-300000">Five minutes ago</option>
-              <option data-id="2" value="-604800000">Last week</option>
-              <option data-id="3" value="+600000">Ten minutes from now</option>
-              <option data-id="4" value="+86400000">Tomorrow</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="timestamp_custom" type="text" />
-          </li>
           <li>
             <label for="actions" not-implemented title="Not implemented by Firefox.">Actions</label>
             <select id="actions">
