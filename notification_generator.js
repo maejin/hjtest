@@ -16,7 +16,7 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
   return {
     dir: this.getField(state, 'dir', 'auto'),
     // lang
-    body: this.getField(state, 'body', ''),
+    body: decodeURI(this.getField(state, 'body', '')),
     tag: this.getField(state, 'tag', ''),
     image: this.getField(state, 'image', undefined),
     icon: this.getField(state, 'icon', undefined),
