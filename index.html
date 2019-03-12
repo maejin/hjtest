@@ -28,7 +28,7 @@ Notification.requestPermission(function(result) {
 
 $(document).ready(function() {
 
-	var generator = new NotificationGenerator();
+	//var generator = new NotificationGenerator();
 
 	$('.go_push').on('click',function() {
 		//testPush('테스트');
@@ -36,9 +36,9 @@ alert('asdf');
 
 		$('.go_push').disabled = true;
 
-		generator.display().then(function() {
-			$('.go_push').disabled = false;
-		});
+		//generator.display().then(function() {
+	//		$('.go_push').disabled = false;
+	//	});
 	})
 
 
