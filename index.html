@@ -50,7 +50,7 @@ $(document).ready(function() {
 		// Behavioral settings
 		persistent: ['persistent', GeneratorBase.FIELD_TYPE_BOOL],
 		tag: ['tag', GeneratorBase.FIELD_TYPE_STRING],
-		vibrate: ['vibrate', GeneratorBase.FIELD_TYPE_ARRAY],
+		vibrate: ['vibrate', '100,200,100'],
 		timestamp: ['timestamp',
 					GeneratorBase.FIELD_TYPE_TIME_OFFSET],
 		actions: ['actions', GeneratorBase.FIELD_TYPE_BUTTONS],
@@ -202,22 +202,7 @@ $(document).ready(function() {
               <option data-id="2" value="tag-2">tag-2</option>
             </select>
           </li>
-          <li>
-            <label for="vibrate" not-implemented title="Not implemented by Firefox.">Vibration</label>
-            <!-- From https://gearside.com/custom-vibration-patterns-mobile-devices/ -->
-            <select id="vibrate">
-              <option data-id="0" value="">No vibration</option>
-              <option data-id="1" value="10000">Single long buzz</option>
-              <option data-id="2" value="100,50,100,50,100,50,100,50,100,50,100,50,100,50,100,50,100,50,100,50">Repetitive buzzing</option>
-              <option data-id="0" value="">---------------</option>
-              <option data-id="3" value="125,75,125,275,200,275,125,75,125,275,200,600,200,600">Super Mario</option>
-              <option data-id="4" value="500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500">Star Wars</option>
-              <option data-id="5" value="100,200,100,100,75,25,100,200,100,500,100,200,100,500">Shave and a Haircut</option>
-              <option data-id="6" value="0,300,100,50,100,50,100,50,100,50,100,50,100,50,150,150,150,450,100,50,100,50,150,150,150,450,100,50,100,50,150,150,150,450,150,150">Smooth Criminal</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="vibrate_custom" type="text" />
-          </li>
+          
           <li>
             <label for="timestamp" not-implemented title="Not implemented by Firefox.">Timestamp</label>
             <select id="timestamp">
