@@ -1,6 +1,11 @@
 ﻿<!--<link rel="manifest" href="/hjtest/manifest.json" />-->
 <script src='/hjtest/sw.js'></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script src="/hjtest/generator_base.js"></script>
+<script src="/hjtest/notification_generator_base.js"></script>
+<script src="/hjtest/notification_generator.js"></script>
+
 <script language='javascript'>
 /*
 if ('serviceWorker' in navigator) {
@@ -21,24 +26,57 @@ navigator.serviceWorker.register('/hjtest/sw.js');
 Notification.requestPermission(function(result) {
   if (result === 'granted') {
     navigator.serviceWorker.ready.then(function(registration) {
-		registration.showNotification('Notification with ServiceWorker');
+		//registration.showNotification('Notification with ServiceWorker');
     });
   }
 });
 
 $(document).ready(function() {
 
+
+	var requirementsElement = document.getElementById('requirements'),
+	element = document.getElementById('test-case');
+	var generator = new NotificationGenerator(requirementsElement, element);
+
+	generator.deserialize(document.location.hash);
+	generator.setFields({
+		// Visual settings
+		title: ['title', GeneratorBase.FIELD_TYPE_STRING],
+		body: ['body', GeneratorBase.FIELD_TYPE_STRING],
+		dir: ['direction', GeneratorBase.FIELD_TYPE_STRING],
+		image: ['image', GeneratorBase.FIELD_TYPE_STRING],
+		icon: ['icon', GeneratorBase.FIELD_TYPE_STRING],
+		badge: ['badge', GeneratorBase.FIELD_TYPE_STRING],
+		// Behavioral settings
+		persistent: ['persistent', GeneratorBase.FIELD_TYPE_BOOL],
+		tag: ['tag', GeneratorBase.FIELD_TYPE_STRING],
+		vibrate: ['vibrate', GeneratorBase.FIELD_TYPE_ARRAY],
+		timestamp: ['timestamp',
+					GeneratorBase.FIELD_TYPE_TIME_OFFSET],
+		actions: ['actions', GeneratorBase.FIELD_TYPE_BUTTONS],
+		silent: ['silent', GeneratorBase.FIELD_TYPE_BOOL],
+		renotify: ['renotify', GeneratorBase.FIELD_TYPE_BOOL],
+		requireInteraction: ['require_interaction',
+							 GeneratorBase.FIELD_TYPE_BOOL],
+		notificationCloseEvent: ['notification_close_event',
+							 GeneratorBase.FIELD_TYPE_BOOL],
+		// Reaction settings
+		action: ['action', GeneratorBase.FIELD_TYPE_STRING],
+		close: ['close', GeneratorBase.FIELD_TYPE_BOOL],
+	  });
+
+
+
 	//var generator = new NotificationGenerator();
 
 	$('.go_push').on('click',function() {
 		//testPush('테스트');
-alert('asdf');
 
 		$('.go_push').disabled = true;
 
-		//generator.display().then(function() {
-	//		$('.go_push').disabled = false;
-	//	});
+		generator.display().then(function() {
+			$('.go_push').disabled = false;
+		});
 	})
 
 
@@ -58,9 +96,10 @@ alert('asdf');
 
 
 
-<div>
-
-
 <button class='go_push'>푸시 테스트!</button>
 
+<div id="test-case" class="test-case">
+	<ul id="requirements" class="requirements">
+		<li>Unable to execute the JavaScript code.</li>
+	</ul>
 </div>
