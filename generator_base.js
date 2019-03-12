@@ -173,7 +173,7 @@ GeneratorBase.FIELD_TYPE_ARRAY = 2;
 GeneratorBase.FIELD_TYPE_BUTTONS = 3;
 GeneratorBase.FIELD_TYPE_TIME_OFFSET = 4;
 
-GeneratorBase.SEPARATOR_FIELD = ';;';
+GeneratorBase.SEPARATOR_FIELD = '|';
 GeneratorBase.SEPARATOR_VALUE = '=';
 GeneratorBase.SEPARATOR_MULTI_VALUE = '$$';
 
