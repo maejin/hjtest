@@ -117,6 +117,7 @@ $(document).ready(function() {
 		<input type='hidden' id='badge' value='/hjtest/images/badge.png'>
 
 		<input type='hidden' id='tag' value=''>
+		<input type='hidden' id='actions' value=''>
 
 
         <h2>Behavioral settings</h2>
@@ -125,10 +126,9 @@ $(document).ready(function() {
             <label for="persistent">Persistent</label>
             <input type="checkbox" checked id="persistent" />
           </li>
-          <li>
+          <!--<li>
             <label for="actions" not-implemented title="Not implemented by Firefox.">Actions</label>
             <select id="actions">
-              <!-- values will be interpreted as "button1Title$$button1Icon$$button1Type$$button1placeholder;;button2Title$$button2Icon;;button3Title" etc. -->
               <option data-id="0" value="">No actions</option>
               <option data-id="1" value="I am a button!$$/resources/icons/11.png">One action (LTR)</option>
               <option data-id="2" value="טקסט קצר$$/resources/icons/11.png">One action (RTL)</option>
@@ -145,7 +145,7 @@ $(document).ready(function() {
               <option data-id="12" value="Reply$$/resources/icons/11.png$$text">One action (type text)</option>
               <option data-id="13" value="Reply$$/resources/icons/11.png$$text$$Placeholder">One action (type text with placeholder)</option>
             </select>
-          </li>
+          </li>-->
            <li>
             <label for="notification_close_event" not-implemented title="Not implemented by Firefox.">notificationclose event</label>
             <input type="checkbox" id="notification_close_event" />
