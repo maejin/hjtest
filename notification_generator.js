@@ -23,13 +23,13 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
     badge: this.getField(state, 'badge', undefined),
     // sound
     vibrate: this.getField(state, 'vibrate', undefined),
-    timestamp: this.getField(state, 'timestamp', undefined),
+    //timestamp: this.getField(state, 'timestamp', undefined),
     //renotify: this.getField(state, 'renotify', false),
     actions: this.getField(state, 'actions', undefined),
     silent: this.getField(state, 'silent', false),
     // noscreen
     persistent: this.getField(state, 'persistent', true),
-    //requireInteraction: this.getField(state, 'requireInteraction', false),
+    requireInteraction: this.getField(state, 'requireInteraction', false),
     sticky: this.getField(state, 'sticky', false),
     notificationCloseEvent: this.getField(state, 'notificationCloseEvent', false),
 
