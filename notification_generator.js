@@ -25,7 +25,7 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
     vibrate: this.getField(state, 'vibrate', undefined),
     //timestamp: this.getField(state, 'timestamp', undefined),
     //renotify: this.getField(state, 'renotify', false),
-    actions: this.getField(state, 'actions', undefined),
+    actions: decodeURI(this.getField(state, 'actions', undefined)),
     silent: this.getField(state, 'silent', false),
     // noscreen
     persistent: this.getField(state, 'persistent', true),
