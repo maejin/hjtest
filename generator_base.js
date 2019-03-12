@@ -213,11 +213,11 @@ GeneratorBase.prototype.setFields = function(fields) {
   Object.keys(fields).forEach(function(key) {
     var settings = fields[key];
 
-    self.fields_[key] = {
+    /*self.fields_[key] = {
       element: self.element_.querySelector('#' + settings[0]),
       elementCustom: self.element_.querySelector('#' + settings[0] + '_custom'),
       type: settings[1]
-    };
+    };*/
 
     self.initializeField(key);
   });
