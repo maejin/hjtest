@@ -121,6 +121,8 @@ $(document).ready(function() {
 		<input type="checkbox" checked id="persistent" style='visibility:hidden' />
 		<input type="checkbox" id="notification_close_event" style='visibility:hidden' />
 
+		<input type='hidden' id='action' data-id="0" value='default'>
+
 
         <!-- <h2>Behavioral settings</h2>
         <ol>
@@ -157,7 +159,7 @@ $(document).ready(function() {
 
         <h2>Reaction settings</h2>
         <ol>
-          <li>
+          <!--<li>
             <label for="action">Action</label>
             <select id="action">
               <option data-id="0" value="default">Focus or open a new window.</option>
@@ -166,7 +168,7 @@ $(document).ready(function() {
               <option data-id="3" value="message">Display an alert().</option>
               <option data-id="4" value="nothing">Do nothing.</option>
             </select>
-          </li>
+          </li>-->
           <li>
             <label for="close">Close it?</label>
             <input type="checkbox" checked id="close" />
