@@ -108,87 +108,14 @@ $(document).ready(function() {
           <li>Unable to execute the JavaScript code.</li>
         </ul>
 
-        <!--<h2>Visual settings</h2>-->
-        <ol>
-			<input type='hidden' id='title' data-id="0" value='TEST!!'>
-			<input type='hidden' id='body' value='테스트중입니다~~ 테스트중입니다~~ 테스트중입니다~~'>
-			<input type='hidden' id='direction' value='ltr'>
-			<input type='hidden' id='image' value='/hjtest/images/my-push-logo.png'>
-			<input type='hidden' id='icon' value='/hjtest/images/badge.png'>
-			<input type='hidden' id='badge' value='/hjtest/images/badge.png'>
+       
+		<input type='hidden' id='title' value='TEST!!'>
+		<input type='hidden' id='body' value='테스트중입니다~~ 테스트중입니다~~ 테스트중입니다~~'>
+		<input type='hidden' id='direction' value='ltr'>
+		<input type='hidden' id='image' value='/hjtest/images/my-push-logo.png'>
+		<input type='hidden' id='icon' value='/hjtest/images/badge.png'>
+		<input type='hidden' id='badge' value='/hjtest/images/badge.png'>
 
-          <!--<li>
-            <label for="title">Title</label>
-            <select id="title">
-              <option data-id="0" value="푸시테스트!">Short sentence (LTR)</option>
-              <option data-id="1" value="כותרת הודעה">Short sentence (RTL)</option>
-              <option data-id="2" value="푸시 알람 테스트입니다! 라라라마넝라먼;하ㅓㅁ낭러나얼;ㅁ나ㅣㅓㅇㄹ;낭ㅁ;러ㅏㅁㄴ;ㅇ람ㄴㅇ;ㅓㄹ">Long sentence (LTR)</option>
-              <option data-id="3" value="המבורגרים: אבן הפינה של כל ארוחת בוקר מזינה. צ'יזבורגר">Long sentence (RTL)</option>
-              <option data-id="4" value="sshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh">Repetitive characters (LTR)</option>
-              <option data-id="5" value="שששששששששששששששששששששששששששששששששששששששששששששששששששש">Repetitive characters (RTL)</option>
-              <option data-id="6" value="😁🚒❤😹🙋⌛❇🚅☎☺">Unicode smileys</option>
-              <option data-id="7" value="">Empty</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="title_custom" type="text" />
-          </li>
-          <li>
-            <label for="body">Body</label>
-            <select id="body">
-              <option data-id="0" value="Notification content">One sentence (LTR)</option>
-              <option data-id="1" value="תוכן הודעה">One sentence (RTL)</option>
-              <option data-id="2" value="This is the notification's message. It may be able to stretch over multiple lines, or become visible when the notification is expanded by the user, depending on the notification center that's being used.">Multiple sentences (LTR)</option>
-              <option data-id="3" value="זהו המסר של ההודעה. זה עשוי להיות מסוגל למתוח על קווים מרובים, או להיות גלוי, כאשר ההודעה מורחבת על ידי המשתמש, בהתאם להודעה שהמרכז נמצא בשימוש">Multiple sentences (RTL)</option>
-              <option data-id="4" value="sshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh">Repetitive characters (LTR)</option>
-              <option data-id="5" value="ששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששש">Repetitive characters (RTL)</option>
-              <option data-id="6" value="🌇😃🍈😆🍜🍻😋⛅⛳😚">Unicode smileys</option>
-              <option data-id="7" value="">Empty</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="body_custom" type="text" />
-          </li>
-          <li>
-            <label for="direction" not-implemented title="Not implemented by Chrome.">Direction</label>
-            <select id="direction">
-              <option data-id="0" value="ltr">Left-to-right</option>
-              <option data-id="1" value="rtl">Right-to-left</option>
-              <option data-id="2" value="auto">Auto</option>
-            </select>
-          </li>
-          <li>
-            <label for="image" not-implemented title="Not yet standardized. Proposed at https://github.com/whatwg/notifications/issues/79">Image</label>
-            <select id="image">
-              <option data-id="0" value="">No image</option>
-              <option data-id="1" value="/hjtest/images/my-push-logo.png">desk photo (JPEG, 192x192)</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="image_custom" type="text" />
-          </li>
-          <li>
-            <label for="icon">Icon</label>
-            <select id="icon">
-              <option data-id="0" value="/hjtest/images/badge.png">Normal PNG icon (256x256)</option>
-              <option data-id="1" value="/resources/icons/15.jpg">Normal JPEG icon (256x256)</option>
-              <option data-id="2" value="/resources/icons/16.gif">Static GIF icon (256x256)</option>
-              <option data-id="3" value="/resources/icons/19.gif">Animated GIF icon (256x256)</option>
-              <option data-id="4" value="">---------------</option>
-              <option data-id="5" value="/resources/icons/17.png">Tiny icon (PNG, 32x32)</option>
-              <option data-id="6" value="/resources/icons/18.png">Huge icon (PNG, 3333x5230)</option>
-              <option data-id="7" value="">No icon</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="icon_custom" type="text" />
-          </li>
-          <li>
-            <label for="badge">Badge</label>
-            <select id="badge">
-              <option data-id="0" value="/hjtest/images/badge.png">Cat icon</option>
-              <option data-id="1" value="">No icon</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="badge_custom" type="text" />
-          </li>-->
-        </ol>
 
         <h2>Behavioral settings</h2>
         <ol>
