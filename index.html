@@ -38,7 +38,26 @@ $(document).ready(function() {
 	var generator = new NotificationGenerator(requirementsElement, element);
 
 	generator.deserialize(document.location.hash);
-	
+	generator.setFields({
+		// Visual settings
+		title: ['title', GeneratorBase.FIELD_TYPE_STRING],
+		body: ['body', GeneratorBase.FIELD_TYPE_STRING],
+		dir: ['direction', GeneratorBase.FIELD_TYPE_STRING],
+		image: ['image', GeneratorBase.FIELD_TYPE_STRING],
+		icon: ['icon', GeneratorBase.FIELD_TYPE_STRING],
+		badge: ['badge', GeneratorBase.FIELD_TYPE_STRING],
+		// Behavioral settings
+		persistent: ['persistent', GeneratorBase.FIELD_TYPE_BOOL],
+		tag: ['tag', GeneratorBase.FIELD_TYPE_STRING],
+		actions: ['actions', GeneratorBase.FIELD_TYPE_BUTTONS],
+		notificationCloseEvent: ['notification_close_event',
+							 GeneratorBase.FIELD_TYPE_BOOL],
+		// Reaction settings
+		action: ['action', GeneratorBase.FIELD_TYPE_STRING],
+		close: ['close', GeneratorBase.FIELD_TYPE_BOOL],
+	  });
+
+
 
 	//var generator = new NotificationGenerator();
 
