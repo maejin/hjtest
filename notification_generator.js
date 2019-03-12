@@ -24,7 +24,6 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
     // sound
     timestamp: this.getField(state, 'timestamp', undefined),
     actions: this.getField(state, 'actions', undefined),
-    silent: this.getField(state, 'silent', false),
     // noscreen
     persistent: this.getField(state, 'persistent', true),
     sticky: this.getField(state, 'sticky', false),
