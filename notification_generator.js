@@ -28,7 +28,8 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
     actions: this.getField(state, 'actions', undefined),
     silent: this.getField(state, 'silent', false),
     // noscreen
-    persistent: this.getField(state, 'persistent', true),
+    //persistent: this.getField(state, 'persistent', true),
+	persistent: true,
     requireInteraction: this.getField(state, 'requireInteraction', false),
     sticky: this.getField(state, 'sticky', false),
     notificationCloseEvent: this.getField(state, 'notificationCloseEvent', false),
