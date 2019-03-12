@@ -32,7 +32,6 @@ Notification.requestPermission(function(result) {
 });
 
 $(document).ready(function() {
-console.log( decodeURI('%ED%91%B8%EC%8B%9C%ED%85%8C%EC%8A%A4%ED%8A%B8!') );
 
 	var requirementsElement = document.getElementById('requirements'),
 	element = document.getElementById('test-case');
@@ -41,7 +40,7 @@ console.log( decodeURI('%ED%91%B8%EC%8B%9C%ED%85%8C%EC%8A%A4%ED%8A%B8!') );
 	generator.deserialize(document.location.hash);
 	generator.setFields({
 		// Visual settings
-		title: ['title', decodeURI(GeneratorBase.FIELD_TYPE_STRING)],
+		title: ['title', GeneratorBase.FIELD_TYPE_STRING],
 		body: ['body', GeneratorBase.FIELD_TYPE_STRING],
 		dir: ['direction', GeneratorBase.FIELD_TYPE_STRING],
 		image: ['image', GeneratorBase.FIELD_TYPE_STRING],
