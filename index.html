@@ -55,9 +55,6 @@ $(document).ready(function() {
 					GeneratorBase.FIELD_TYPE_TIME_OFFSET],
 		actions: ['actions', GeneratorBase.FIELD_TYPE_BUTTONS],
 		silent: ['silent', GeneratorBase.FIELD_TYPE_BOOL],
-		renotify: ['renotify', GeneratorBase.FIELD_TYPE_BOOL],
-		requireInteraction: ['require_interaction',
-							 GeneratorBase.FIELD_TYPE_BOOL],
 		notificationCloseEvent: ['notification_close_event',
 							 GeneratorBase.FIELD_TYPE_BOOL],
 		// Reaction settings
@@ -257,14 +254,6 @@ $(document).ready(function() {
           <li>
             <label for="silent" not-implemented title="Not implemented by Firefox.">Silent</label>
             <input type="checkbox" id="silent" />
-          </li>
-          <li>
-            <label for="renotify" not-implemented title="Not implemented by Firefox.">Renotify</label>
-            <input type="checkbox" id="renotify" />
-          </li>
-          <li>
-            <label for="require_interaction" not-implemented title="Not implemented by Firefox.">Req. interaction</label>
-            <input type="checkbox" id="require_interaction" />
           </li>
            <li>
             <label for="notification_close_event" not-implemented title="Not implemented by Firefox.">notificationclose event</label>
