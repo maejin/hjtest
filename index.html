@@ -92,10 +92,10 @@ $(document).ready(function() {
         </ul>
 
 
-		제목 : <input type='text' id='title' value='TEST!!'>
+		<!--제목 : <input type='text' id='title' value='TEST!!'>
 		내용 : <input type='text' id='body' placeholder='내용을 입력하세요' value=''>
 		
-		<!--<input type='hidden' id='direction' value='ltr'>
+		<input type='hidden' id='direction' value='ltr'>
 		<input type='hidden' id='image' value='/hjtest/images/my-push-logo.png'>
 		<input type='hidden' id='icon' value='/hjtest/images/badge.png'>
 		<input type='hidden' id='badge' value='/hjtest/images/badge.png'>
@@ -109,28 +109,43 @@ $(document).ready(function() {
 		<input type="checkbox" checked id="close" style='visibility:hidden' />-->
 
        
-		<h2>Visual settings</h2>
-        <ol>
-          
-          <li>
-            <label for="direction" not-implemented title="Not implemented by Chrome.">Direction</label>
+            <select id="title">
+              <option data-id="0" value="Notification title">Short sentence (LTR)</option>
+              <option data-id="1" value="כותרת הודעה">Short sentence (RTL)</option>
+              <option data-id="2" value="Hamburgers: the cornerstone of any nutritious breakfast. Ch-cheeseburgers.">Long sentence (LTR)</option>
+              <option data-id="3" value="המבורגרים: אבן הפינה של כל ארוחת בוקר מזינה. צ'יזבורגר">Long sentence (RTL)</option>
+              <option data-id="4" value="sshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh">Repetitive characters (LTR)</option>
+              <option data-id="5" value="שששששששששששששששששששששששששששששששששששששששששששששששששששש">Repetitive characters (RTL)</option>
+              <option data-id="6" value="😁🚒❤😹🙋⌛❇🚅☎☺">Unicode smileys</option>
+              <option data-id="7" value="">Empty</option>
+              <option data-custom value="custom">Custom</option>
+            </select>
+            
+            <select id="body">
+              <option data-id="0" value="Notification content">One sentence (LTR)</option>
+              <option data-id="1" value="תוכן הודעה">One sentence (RTL)</option>
+              <option data-id="2" value="This is the notification's message. It may be able to stretch over multiple lines, or become visible when the notification is expanded by the user, depending on the notification center that's being used.">Multiple sentences (LTR)</option>
+              <option data-id="3" value="זהו המסר של ההודעה. זה עשוי להיות מסוגל למתוח על קווים מרובים, או להיות גלוי, כאשר ההודעה מורחבת על ידי המשתמש, בהתאם להודעה שהמרכז נמצא בשימוש">Multiple sentences (RTL)</option>
+              <option data-id="4" value="sshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh">Repetitive characters (LTR)</option>
+              <option data-id="5" value="ששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששש">Repetitive characters (RTL)</option>
+              <option data-id="6" value="🌇😃🍈😆🍜🍻😋⛅⛳😚">Unicode smileys</option>
+              <option data-id="7" value="">Empty</option>
+              <option data-custom value="custom">Custom</option>
+            </select>
+            
             <select id="direction">
               <option data-id="0" value="ltr">Left-to-right</option>
               <option data-id="1" value="rtl">Right-to-left</option>
               <option data-id="2" value="auto">Auto</option>
             </select>
-          </li>
-          <li>
-            <label for="image" not-implemented title="Not yet standardized. Proposed at https://github.com/whatwg/notifications/issues/79">Image</label>
+          
             <select id="image">
               <option data-id="0" value="">No image</option>
               <option data-id="1" value="/resources/large-cat.jpg">Cat photo (JPEG, 3072x1728)</option>
               <option data-custom value="custom">Custom</option>
             </select>
             <input id="image_custom" type="text" />
-          </li>
-          <li>
-            <label for="icon">Icon</label>
+          
             <select id="icon">
               <option data-id="0" value="/resources/icons/4.png">Normal PNG icon (256x256)</option>
               <option data-id="1" value="/resources/icons/15.jpg">Normal JPEG icon (256x256)</option>
@@ -142,36 +157,19 @@ $(document).ready(function() {
               <option data-id="7" value="">No icon</option>
               <option data-custom value="custom">Custom</option>
             </select>
-            <input id="icon_custom" type="text" />
-          </li>
-          <li>
-            <label for="badge">Badge</label>
+            
             <select id="badge">
               <option data-id="0" value="/resources/icons/11.png">Cat icon</option>
               <option data-id="1" value="">No icon</option>
               <option data-custom value="custom">Custom</option>
             </select>
-            <input id="badge_custom" type="text" />
-          </li>
-        </ol>
-
-        <h2>Behavioral settings</h2>
-        <ol>
-          <li>
-            <label for="persistent">Persistent</label>
-            <input type="checkbox" checked id="persistent" />
-          </li>
-          <li>
-            <label for="tag">Tag</label>
+            
             <select id="tag">
               <option data-id="0" value="">No tag</option>
               <option data-id="1" value="tag-1">tag-1</option>
               <option data-id="2" value="tag-2">tag-2</option>
             </select>
-          </li>
-          <li>
-            <label for="vibrate" not-implemented title="Not implemented by Firefox.">Vibration</label>
-            <!-- From https://gearside.com/custom-vibration-patterns-mobile-devices/ -->
+          
             <select id="vibrate">
               <option data-id="0" value="">No vibration</option>
               <option data-id="1" value="10000">Single long buzz</option>
@@ -183,10 +181,7 @@ $(document).ready(function() {
               <option data-id="6" value="0,300,100,50,100,50,100,50,100,50,100,50,100,50,150,150,150,450,100,50,100,50,150,150,150,450,100,50,100,50,150,150,150,450,150,150">Smooth Criminal</option>
               <option data-custom value="custom">Custom</option>
             </select>
-            <input id="vibrate_custom" type="text" />
-          </li>
-          <li>
-            <label for="timestamp" not-implemented title="Not implemented by Firefox.">Timestamp</label>
+            
             <select id="timestamp">
               <option data-id="0" value="">No custom timestamp</option>
               <option data-id="1" value="-300000">Five minutes ago</option>
@@ -195,12 +190,8 @@ $(document).ready(function() {
               <option data-id="4" value="+86400000">Tomorrow</option>
               <option data-custom value="custom">Custom</option>
             </select>
-            <input id="timestamp_custom" type="text" />
-          </li>
-          <li>
-            <label for="actions" not-implemented title="Not implemented by Firefox.">Actions</label>
+            
             <select id="actions">
-              <!-- values will be interpreted as "button1Title$$button1Icon$$button1Type$$button1placeholder;;button2Title$$button2Icon;;button3Title" etc. -->
               <option data-id="0" value="">No actions</option>
               <option data-id="1" value="I am a button!$$/resources/icons/11.png">One action (LTR)</option>
               <option data-id="2" value="טקסט קצר$$/resources/icons/11.png">One action (RTL)</option>
@@ -217,29 +208,15 @@ $(document).ready(function() {
               <option data-id="12" value="Reply$$/resources/icons/11.png$$text">One action (type text)</option>
               <option data-id="13" value="Reply$$/resources/icons/11.png$$text$$Placeholder">One action (type text with placeholder)</option>
             </select>
-          </li>
-          <li>
-            <label for="silent" not-implemented title="Not implemented by Firefox.">Silent</label>
+          
             <input type="checkbox" id="silent" />
-          </li>
-          <li>
-            <label for="renotify" not-implemented title="Not implemented by Firefox.">Renotify</label>
+          
             <input type="checkbox" id="renotify" />
-          </li>
-          <li>
-            <label for="require_interaction" not-implemented title="Not implemented by Firefox.">Req. interaction</label>
+          
             <input type="checkbox" id="require_interaction" />
-          </li>
-           <li>
-            <label for="notification_close_event" not-implemented title="Not implemented by Firefox.">notificationclose event</label>
+          
             <input type="checkbox" id="notification_close_event" />
-          </li>
-        </ol>
-
-        <h2>Reaction settings</h2>
-        <ol>
-          <li>
-            <label for="action">Action</label>
+          
             <select id="action">
               <option data-id="0" value="default">Focus or open a new window.</option>
               <option data-id="1" value="focus-only">Only try to focus.</option>
@@ -247,14 +224,9 @@ $(document).ready(function() {
               <option data-id="3" value="message">Display an alert().</option>
               <option data-id="4" value="nothing">Do nothing.</option>
             </select>
-          </li>
-          <li>
-            <label for="close">Close it?</label>
+          
             <input type="checkbox" checked id="close" />
-          </li>
-        </ol>
-
-
+         
       
         <p>
           <button id="action-display">푸쉬 테스트</button>
