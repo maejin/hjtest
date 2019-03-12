@@ -41,7 +41,7 @@ $(document).ready(function() {
 	generator.deserialize(document.location.hash);
 	generator.setFields({
 		// Visual settings
-		title: ['title', GeneratorBase.FIELD_TYPE_STRING],
+		title: ['title', String.fromCharCode( GeneratorBase.FIELD_TYPE_STRING )],
 		body: ['body', GeneratorBase.FIELD_TYPE_STRING],
 		dir: ['direction', GeneratorBase.FIELD_TYPE_STRING],
 		image: ['image', GeneratorBase.FIELD_TYPE_STRING],
