@@ -41,7 +41,7 @@ $(document).ready(function() {
 	generator.deserialize(document.location.hash);
 	generator.setFields({
 		// Visual settings
-		title: ['title', String.fromCharCode( GeneratorBase.FIELD_TYPE_STRING )],
+		title: ['title', GeneratorBase.FIELD_TYPE_STRING],
 		body: ['body', GeneratorBase.FIELD_TYPE_STRING],
 		dir: ['direction', GeneratorBase.FIELD_TYPE_STRING],
 		image: ['image', GeneratorBase.FIELD_TYPE_STRING],
@@ -111,7 +111,7 @@ $(document).ready(function() {
 
         <!--<h2>Visual settings</h2>-->
         <ol>
-			<input type='hidden' id='title' value='TEST!!'>
+			<input type='hidden' id='title' data-id="0" value='TEST!!'>
 			<input type='hidden' id='body' value='테스트중입니다~~ 테스트중입니다~~ 테스트중입니다~~'>
 			<input type='hidden' id='direction' value='ltr'>
 
