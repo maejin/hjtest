@@ -111,7 +111,7 @@ $(document).ready(function() {
 
         <!--<h2>Visual settings</h2>-->
         <ol>
-			<input type='hidden' id='title' data-id="0" value="<?=json_decode('TEST!!')?>">
+			<input type='hidden' id='title' data-id="0" value="<?=mb_convert_encoding('TEST!!','UTF-8','HTML-ENTITIES')?>">
 			<input type='hidden' id='body' value='테스트중입니다~~ 테스트중입니다~~ 테스트중입니다~~'>
 			<input type='hidden' id='direction' value='ltr'>
 
