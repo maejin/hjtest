@@ -56,7 +56,7 @@ NotificationGenerator.prototype.display = function() {
     return;
   }
 
-  var title = state.title.value,
+  var title = decodeURI(state.title.value),
       options = this.createNotificationOptions(state),
       persistent = state.persistent.value;
 
