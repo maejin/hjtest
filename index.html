@@ -46,7 +46,6 @@ $(document).ready(function() {
 		dir: ['direction', GeneratorBase.FIELD_TYPE_STRING],
 		image: ['image', GeneratorBase.FIELD_TYPE_STRING],
 		icon: ['icon', GeneratorBase.FIELD_TYPE_STRING],
-		badge: ['badge', GeneratorBase.FIELD_TYPE_STRING],
 		// Behavioral settings
 		persistent: ['persistent', GeneratorBase.FIELD_TYPE_BOOL],
 		tag: ['tag', GeneratorBase.FIELD_TYPE_STRING],
@@ -173,15 +172,7 @@ $(document).ready(function() {
             </select>
             <input id="icon_custom" type="text" />
           </li>
-          <li>
-            <label for="badge">Badge</label>
-            <select id="badge">
-              <option data-id="0" value="/hjtest/images/badge.png">Cat icon</option>
-              <option data-id="1" value="">No icon</option>
-              <option data-custom value="custom">Custom</option>
-            </select>
-            <input id="badge_custom" type="text" />
-          </li>
+          
         </ol>
 
         <h2>Behavioral settings</h2>
