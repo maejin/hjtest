@@ -22,6 +22,7 @@ NotificationGenerator.prototype.createNotificationOptions = function(state) {
     icon: this.getField(state, 'icon', undefined),
     badge: this.getField(state, 'badge', undefined),
     // sound
+    timestamp: this.getField(state, 'timestamp', undefined),
     actions: this.getField(state, 'actions', undefined),
     silent: this.getField(state, 'silent', false),
     // noscreen
