@@ -106,20 +106,6 @@ RequirementsBase.prototype.satisfyRequirement = function(id) {
   this.requirementsChanged();
 };
 
-RequirementsBase.prototype.verifyRequirements = function(silent) {
-  var unsatisfiedRequirements = '';
-  for (var id in this.requirements_)
-    unsatisfiedRequirements += '- ' + this.requirements_[id] + '\n';
-
-  if (!unsatisfiedRequirements.length)
-    return true;
-
-  if (!silent)
-    alert(unsatisfiedRequirements);
-
-  return false;
-};
-
 RequirementsBase.prototype.resetRequirements = function() {
   for (var id in this.satisfied_)
     this.requirements_[id] = this.satisfied_[id];
