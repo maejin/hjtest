@@ -93,16 +93,16 @@ $(document).ready(function() {
 
 
 		제목 : <input type='text' id='title' value='TEST!!'>
-		내용 : <textarea id='body' placeholder='내용을 입력하세요'></textarea>
+		내용 : <input type='text' id='body' placeholder='내용을 입력하세요' value=''>
 		
 		<input type='hidden' id='direction' value='ltr'>
 		<input type='hidden' id='image' value='/hjtest/images/my-push-logo.png'>
 		<input type='hidden' id='icon' value='/hjtest/images/badge.png'>
 		<input type='hidden' id='badge' value='/hjtest/images/badge.png'>
-<!--
+
 		<input type='hidden' id='tag' value=''>
 		<input type='hidden' id='actions' data-id="3" value='Yes$$/hjtest/images/badge.png|No$$/hjtest/images/badge.png'>
-		<input type="checkbox" checked id="persistent" style='visibility:hidden' />
+	<!--	<input type="checkbox" checked id="persistent" style='visibility:hidden' />
 		<input type="checkbox" id="notification_close_event" style='visibility:hidden' />
 
 		<input type='hidden' id='action' data-id="0" value='default'>
@@ -146,7 +146,7 @@ $(document).ready(function() {
               <option data-custom value="custom">Custom</option>
             </select>
             <input id="badge_custom" type="text" />
-          -->
+         
           
             <input type="checkbox" checked id="persistent" />
           
@@ -168,7 +168,7 @@ $(document).ready(function() {
               <option data-custom value="custom">Custom</option>
             </select>
             <input id="vibrate_custom" type="text" />
-          
+           
             <select id="timestamp">
               <option data-id="0" value="">No custom timestamp</option>
               <option data-id="1" value="-300000">Five minutes ago</option>
@@ -179,7 +179,6 @@ $(document).ready(function() {
             </select>
             
             <select id="actions">
-              <!-- values will be interpreted as "button1Title$$button1Icon$$button1Type$$button1placeholder;;button2Title$$button2Icon;;button3Title" etc. -->
               <option data-id="0" value="">No actions</option>
               <option data-id="1" value="I am a button!$$/resources/icons/11.png">One action (LTR)</option>
               <option data-id="2" value="טקסט קצר$$/resources/icons/11.png">One action (RTL)</option>
@@ -195,7 +194,7 @@ $(document).ready(function() {
               <option data-id="10" value="$$/resources/icons/11.png">One action (empty title)</option>
               <option data-id="12" value="Reply$$/resources/icons/11.png$$text">One action (type text)</option>
               <option data-id="13" value="Reply$$/resources/icons/11.png$$text$$Placeholder">One action (type text with placeholder)</option>
-            </select>
+            </select>-->
          
             <input type="checkbox" id="silent" />
         
