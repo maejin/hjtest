@@ -344,7 +344,6 @@ GeneratorBase.prototype.resolveFieldState = function(name) {
       index = undefined,
       value = undefined;
 
-alert('asdf');
   switch (field.element.tagName) {
     case 'INPUT':
       if (field.element.type == 'checkbox')
