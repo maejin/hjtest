@@ -6,17 +6,22 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-  // Perform install steps
-  event.waitUntil(
-    caches.open(zero_cache)
-      .then(function(cache) {
-        //console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+	self.skipWaiting(); //대기상태를 건너뛰고 서비스 워커를 바로 실행
+	// Perform install steps
+	event.waitUntil(
+	caches.open(zero_cache)
+	  .then(function(cache) {
+		console.log('Opened cache');
+		return cache.addAll(urlsToCache);
+	  })
+	);
 });
 
-    
+self.addEventListener('activate', function(event) {
+	console.log('Service Worker Activated', event);
+});
+
+
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
@@ -26,9 +31,25 @@ self.addEventListener('fetch', function(event) {
           return response;
 //console.log( response );
         }
-        return fetch(event.request);
+
+		var fetchRequest = event.request.clone(); // response 복제
+		return fetch(fetchRequest).then(
+			function(response){
+				if(!response || response.status != 200 || response.type !== 'basic'){
+					return response;
+				}
+
+				var responseToCache = response.clone();
+				cashes.open('my-site-cache-v1')
+					.then(function(cache) {
+						cache.put(event.request, responseToCach);
+				});
+
+				return response;
+        //return fetch(event.request);
       }
     )
+  })
   );
 });
 
