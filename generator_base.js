@@ -236,6 +236,7 @@ GeneratorBase.prototype.initializeField = function(name) {
   } else if (field.element.type == 'INPUT') {
 	field.defaultValue =
         field.element.getAttribute('data-id');
+	alert( field.defaultValue );
   }
 
   // Listen for value changes so that the custom element can be displayed or
