@@ -235,7 +235,7 @@ GeneratorBase.prototype.initializeField = function(name) {
     field.defaultValue = field.element.checked;
   } else if (field.element.type == 'text') {
 	field.defaultValue =
-        field.element.getAttribute('data-id');
+        field.element.val();
 	alert( field.defaultValue );
   }
 
