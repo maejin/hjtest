@@ -233,7 +233,7 @@ GeneratorBase.prototype.initializeField = function(name) {
         field.element.options[field.element.selectedIndex].getAttribute('data-id');
   } else if (field.element.type == 'checkbox') {
     field.defaultValue = field.element.checked;
-  } else if (field.element.type == 'INPUT') {
+  } else if (field.element.type == 'text') {
 	field.defaultValue =
         field.element.getAttribute('data-id');
 	alert( field.defaultValue );
