@@ -65,8 +65,7 @@ NotificationGenerator.prototype.display = function() {
 
   var self = this;
   return promise.then(function() {
-    document.location.hash =
-        self.serialize(self.computeState(false /* includeDefault */));
+    //document.location.hash = self.serialize(self.computeState(false /* includeDefault */));
   });
 };
 
