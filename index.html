@@ -36,7 +36,7 @@ $(document).ready(function() {
 	var requirementsElement = document.getElementById('requirements'),
 	element = document.getElementById('test-case');
 	var generator = new NotificationGenerator(requirementsElement, element);
-
+alert( GeneratorBase.FIELD_TYPE_STRING );
 	generator.deserialize(document.location.hash);
 	generator.setFields({
 		// Visual settings
