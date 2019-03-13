@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(zero_cache)
       .then(function(cache) {
-        console.log('Opened cache');
+        //console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
   );
@@ -24,7 +24,7 @@ self.addEventListener('fetch', function(event) {
         // Cache hit - return response
         if (response) {
           return response;
-console.log( response );
+//console.log( response );
         }
         return fetch(event.request);
       }
