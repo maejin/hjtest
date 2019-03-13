@@ -1,4 +1,4 @@
-﻿/*
+﻿
 var zero_cache = 'my-site-cache-v1';
 var urlsToCache = [
   '/hjtest/index.html',
@@ -32,7 +32,7 @@ console.log( response );
   );
 });
 
-*/
+
 
 /*
 self.addEventListener('push', function(event) {
