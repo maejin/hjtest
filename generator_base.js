@@ -236,7 +236,6 @@ GeneratorBase.prototype.initializeField = function(name) {
   } else if (field.element.type == 'text') {
 	field.defaultValue =
         field.element.val();
-	alert( field.defaultValue );
   }
 
   // Listen for value changes so that the custom element can be displayed or
